@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap">
+    <link rel="stylesheet" href=
+"https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="ui.js" defer></script>
+    <script src="form.js" defer></script>
+    <title>WindowClean North-East</title>
+  </head>
+  <header>
+    <img class="main-logo" src="images/logo.png" alt="Window Clean North-East
+      logo">
+    <div id="right-box">
+      <div class="link-box">
+        <a href="mailto:wcnortheast@gmail.com" class="contact-link"> <img
+          class="icon" src="images/email-icon.png" alt="Email contact">
+          wcnortheast@gmail.com</a>
+        <a href="tel:07470694007" class="contact-link"> <img class="icon"
+          src="images/phone-icon.png" alt="Phone contact">
+          07470694007</a>
+      </div>
+      <div class="link-box">
+        <a class="nav-link" href="index.html#home-section">Home</a>
+        <a class="nav-link" href="index.html#register-section">Register</a>
+        <div class="dropdown">
+          <button class="nav-link">Services</button>
+            <div class="dropdown-content">
+              <a class="nav-sublink" href="index.html#services-section">Our
+                Services</a>
+              <a class="nav-sublink" href="index.html#map-section">Where We
+                Clean</a>
+            </div>
+        </div>
+        <div class="dropdown">
+          <button class="nav-link">About</button>
+            <div class="dropdown-content">
+              <a class="nav-sublink"href="index.html#about-section">About Us</a>
+              <a class="nav-sublink" href="index.html#pwc-section">Pure Water
+                Cleaning</a>
+              <a class="nav-sublink"href="index.html#gallery-section">More
+                Images</a>
+            </div>
+        </div>
+        <a class="nav-link" href="index.html#payment-section">Payments</a>
+      </div>
+    </div>
+  </header>
+  <body>
+    <section id="home-section">
+      <div class="home">
+        <div style="background-color:#304075;">
+          <h1 id="main-header">Window Cleaning in the North-East</h1>
+          <h1 id="main-header2"><em>We have been providing fast, quality
+            services since 2015.</em></h1>
+        </div>
+        <div style="margin-top:-45px">
+          <h2><u>We offer:</u></h2>
+          <ul>
+            <li>Pole and reach window cleaning;
+              <br>reaching heights without help.</li>
+            <li>Gutter cleaning</li>
+            <li>Patio cleaning</li>
+            <li>Fascia cleaning</li>
+            <li>Commerical property cleaning</li>
+          </ul>
+          <ul>
+            <li>Full insurance</li>
+            <li>No hidden fees</li>
+            <li>Online payments</li>
+            <br>
+          </ul>
+        </div>
+        <div id="main-pwc">
+          <h2><u>Pure Water Cleaning</u></h2>
+          <h4>We use the superior method of pure water cleaning. Making use of
+            filtered water to leave a crystal-clear finish, without the need
+            of additional scrubbing or ladders.</h4>
+          <a class="contact-link" href="index.html#pwc-section">
+            <u>Find out more!</u></a>
+        </div>
+      </div>
+      <div id="main-img1" class="home"></div>
+    </section>
+    <section id="register-section">
+      <form action="" method="">
+        <h1><u>Window Cleaning Registration Form</u></h1>
+        <p class="form-option">Tell us about what you require and we will
+          contact you with a date and time...</p>
+        <div class="form-group">
+          <label id="name-label" class="form-label" for="form-name">
+            Name:</label>
+          <input id="name-input" type="text" name="form-name" class="form-input"
+            placeholder="Enter your personal/business name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-address">Address:</label>
+          <textarea id="address-input" name="form-address" rows="4" cols="60"
+            placeholder="Enter your address" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-phone">Telephone:</label>
+          <input id="phone-input" type="text" name="form-phone" 
+            class="form-input" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-email">Email:</label>
+          <input id="email-input" type="text" name="form-email"
+            class="form-input" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <h3 class="form-label">Which services are you interested in?
+            <span>Select all that apply</span></h3>
+          <label class="form-option"><input name="form-services" id="windows"
+            type="checkbox" class="input-checkbox"/>Window cleaning</label>
+            <br><br>
+          <label class="form-option"><input name="form-services" id="fascia"
+            type="checkbox" class="input-checkbox"/>Fascia cleaning</label>
+            <br><br>
+          <label class="form-option"><input name="form-services" id="patio"
+            type="checkbox" class="input-checkbox"/>Patio jet-wash</label>
+            <br><br>
+          <label class="form-option"><input name="form-services" id="gutters"
+            type="checkbox" class="input-checkbox"/>Gutter cleaning</label>
+            <br><br>
+          <label class="form-option"><input name="form-services"
+            id="conservatory" type="checkbox" class="input-checkbox"/>
+            Conservatory cleaning</label>
+        </div>
+        <div class="form-group">
+          <h3 class="form-label">How often do you require our service?
+            <span>Select one option</span></h3>
+          <label class="form-option"><input name="form-frequency" id="2-weeks"
+            type="radio" class="input-radio"/>Every 2 weeks</label>
+          <label class="form-option"><input name="form-frequency" id="4-weeks"
+            type="radio" class="input-radio"/>Every 4 weeks</label>
+          <label class="form-option"><input name="form-frequency" id="6-weeks"
+            type="radio" class="input-radio"/>Every 6 weeks</label>
+        </div>
+        <div class="form-group">
+          <p id="submit-message"></p>
+          <button type="submit" id="submit-button">Submit</button>
+        </div>
+      </form>
+    </section>
+    <section id="services-section">
+      <h1 id="services-title"><u>Our Cleaning Services</u></h1>
+      <div id="services-grid">
+        <!-- Services tiles go here -->
+      </div>
+    </section>
+    <section id="map-section">
+      <h1><u>Where We Clean</u></h1>
+      <img id="map" src="images/areas-map.png" alt="Map of where
+        we serve">
+      <h2 style="color:white">We are based in Middlesbrough and cover areas
+        shown on the map above. We serve areas as far North as Morpeth
+        including Newcastle, as far south as Knaresborough including Ripon and
+        across to Catterick including Richmond.</h2>
+    </section>
+    <section id="about-section">
+      <h1 class="about-title"><u>About Us</u></h1>
+      <ul>
+        <li class="about-li">In operation since 2015, we have seen steady annual
+          growth so now service on average 2000 homes every year, with 7 full-time
+          employees. We have been recognised as a Safe Contractor and are fully
+          covered by Zurich public liability insurance.</li>
+        <li class="about-li">We began as a window cleaning service, now have
+          expanded to cleaning piping and any exterior fixtures. We offer a
+          flexible jet-wash service and have expanded to the commerical
+          market.</li>
+        <li>We are fully reachable by<a class="contact-link"style="padding:5px"
+          href="mailto:wcnortheast@gmail.com">email</a>and<a style="padding:5px"
+          class="contact-link" href="tel:07470694007">phone</a>.</li>
+      </ul>
+      <br>
+      <h2 class="about-title"><u>Check out our Facebook page...</u></h2>
+      <div id="links">
+        <img class="logo" src="images/fb-logo.png" alt="facebook logo">
+        <a class="contact-link" href="https://www.facebook.com/wcnortheast"
+          target="_blank"><strong>facebook.com/wcnortheast</strong></a>
+      </div>
+    </section>
+    <section id="pwc-section">
+      <h1 id="pwc-title"><u>Pure Water Window Cleaning</u></h1>
+      <div id="pwc-scroll">
+        <p id="pwc-subtitle">Pure water cleaning is using filtered water instead
+          of unfiltered water. Results in a crystal-clear finish when left to
+          dry, hence water can be left to soak naturally once all dirt has been
+          scrubbed. All cleaning can be done without ladders relying on water
+          power alone.</p>
+        <h4><strong><u>Advantages</strong></u></h4>
+        <ul>
+          <li>No need for ladders, so no risk of insurance claims and increased
+            privacy</li>
+          <li>No risk of glass stains or marks left over from soap</li>
+          <li>Allows reaching over obstacles</li>
+          <li>Environmentally friendly, no need for chemicals or soaps</li>
+          <li>A more efficient clean, windows can be left to dry naturally</li>
+        </ul>
+        <h4><u>How the Process Works</u></h4>
+        <p><strong>Agitating the Dirt: </strong>Once water is purified, it is
+          ready to clean with. However it’s not just a case of ‘splash &
+          dash’, there is some knowhow required. The first step is to agitate
+          (scrub) the windows with a water-fed pole & brush designed
+          specifically for the task. By scrubbing the windows you’re
+          loosening any dirt or build up on the window, frame and surrounding
+          plastics.</p>
+        <p><strong>Effective Rinsing: </strong>Rinsing the loosened dirt and
+          debris is important, as anything except pure water left on the
+          window will ruin the perfect finish. The deionised water will
+          attract the dirt and minerals scrubbed from the window, creating a
+          non-pure solution. This needs to then be rinsed thoroughly from the
+          window, leaving only Pure Water left to dry clear in a matter of
+          minutes (the same applies to sills and frames). It’s simple in
+          principle, though of course like anything, there is a learning curve
+          and it will take time to become completely proficient in this method
+          of cleaning.</p>
+        <h4><u>What is Pure Water</u></h4>
+        <p>In addition to Hydrogen & Oxygen (H20), tap water also contains
+          minerals. For drinking purposes, this isn’t a problem, however when
+          it comes to cleaning the likes of calcium, magnesium and other
+          minerals remain, when the water evaporates away. This leaves hard
+          water stains and unsightly spotting. You’ll notice these build up on
+          any glass surrounding showers or taps at home, or even after washing
+          your car.<br>
+          Generally water is classified as either hard or soft. This refers
+          to the abundance of minerals built up in the water, the harder the
+          water the more costly it is to purify, and this is usually location
+          dependent. For example most of South Wales & Scotland have soft
+          water (TDS readings of 150 or less), whereas Bristol & London have
+          very hard water (up to 350ppm).</p>
+      </div>
+      <br>
+      <br>
+      <img class="feature-img" src="images/pwc.jpg" alt="Pure water window
+        cleaning image">
+      <a href="https://www.faceliftcleaning.co.uk/pages/pure-water-guide"
+        class="contact-link" style="padding-top:40px"
+        target="_blank"><u>Find out more about Pure-Water Cleaning at FaceLift
+        Cleaning</u>.</a>
+    </section>
+    <section id="gallery-section">
+        <h1><u>Windows Gallery</u></h1>
+        <div id="images-box">
+          <!-- Image tiles will go here -->
+        </div>
+        <p style="color: white"><em>Scroll across to see more...</em></p>
+        <p style="color: white">All images were taken at client sites after
+          cleaning.</p>
+    </section>
+    <section id="payment-section">
+      <h1 id="payment-title"><u>Payments for Window Cleaning</u></h1>
+      <img class="feature-img" src="images/payment-slip.jpg" alt="Payment slip
+        after window cleaning">
+      <h2>A payment slip is posted after every clean. If you have lost
+      this then please follow the instructions detailed on the slip above.
+      </h2>
+      <p>If you have any issues, do not hesitate to get in touch.</p>
+    </section>
+    <p id="tagline">Site made possible by <a style="color:#8d8" 
+      target="_blank" href="https://firebase.google.com/">Firebase</a>, written 
+      by <a href="https://github.com/georgecs2358" style="color:#8d8" 
+        target="_blank">George</a>.</p>
+  </body>
+</html>

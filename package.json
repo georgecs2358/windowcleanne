@@ -1,0 +1,27 @@
+{
+  "name": "windowclean-north-east",
+  "version": "1.2.0",
+  "description": "Window cleaning business information and registration",
+  "main": "index.js",
+  "keywords": [
+    "window cleaning",
+    "window cleaning middlesbrough",
+    "window cleaning stockton",
+    "window cleaning hartlepool",
+    "cleaning",
+    "jet wash",
+    "north east",
+    "windows",
+    "business",
+    "gutter cleaning",
+    "fascia cleaning"
+  ],
+  "author": "georgejs97",
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase": "^7.17.1"
+  }
+}
