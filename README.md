@@ -1,4 +1,4 @@
-### https://www.wcnortheast.co.uk
+### https://wcnortheast.co.uk
 
 The files shown are the public front-end code I wrote for this site.
 
