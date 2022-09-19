@@ -1,30 +1,21 @@
-const path = require('path');
-const express = require('express');
-const bodyParser = require('body-parser');
-const sendEmail = require('./sendgrid');
-const cors = require('cors');
+const path = require("path");
+const express = require("express");
+const bodyParser = require("body-parser");
+const sendEmail = require("./sendgrid");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 3001;
+const publicDirectoryPath = path.join(__dirname, "../public");
 
-const publicDirectoryPath = path.join(__dirname, '../public');
-
-app.use(cors({origin: true}));
+app.use(cors({ origin: true }));
 app.use(express.static(publicDirectoryPath));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/response-msg', (request, response) => {
-  console.log('Registration message sent from back-end.');
-  response.status(200).send({
-    msg: 'Thank you for registering, we will be in touch...',
-  });
-});
-
-app.post('/details', (request, response) => {
-  console.log('Registration details sent to back-end.');
-  console.log(request.body);
+app.post("/details", (request, response) => {
   sendEmail(
     request.body.name,
     request.body.phone,
@@ -32,12 +23,22 @@ app.post('/details', (request, response) => {
     request.body.address,
     request.body.services,
     request.body.frequency
-  );
-  response.status(200).send();
+  )
+    .then((res) => {
+      if (res[0].statusCode === 202) {
+        response.status(200).send();
+      } else {
+        response.status(400).send();
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      response.status(400).send();
+    });
 });
 
-app.get('*', (request, response, err) => {
-  response.json({error: err});
+app.get("*", (request, response, err) => {
+  response.json({ error: err });
 });
 
 app.listen(port, () => {

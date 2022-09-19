@@ -1,15 +1,15 @@
-const sgMail = require('@sendgrid/mail');
+const sgMail = require("@sendgrid/mail");
+require("dotenv").config();
 
-const sendgridAPIKey =
-  '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';
+const sendgridAPIKey = "SG." + process.env.SENDGRID_KEY;
 sgMail.setApiKey(sendgridAPIKey);
 
-const sendEmail = (name, phone, email, address, services, frequency) => {
-  sgMail.send({
+const sendEmail = async (name, phone, email, address, services, frequency) => {
+  return await sgMail.send({
     to: email,
-    from: 'wcnortheast.enquiries@gmail.com',
-    bcc: 'wcnortheast@gmail.com',
-    subject: 'Thanks for registering with WindowClean North East',
+    from: "wcnortheast.enquiries@gmail.com",
+    bcc: "wcnortheast@gmail.com",
+    subject: "Thanks for registering with WindowClean North East",
     text: `Thanks you for joining us <strong>${name}</strong>, we will contact
       you shortly.`,
     html: `Dear <strong>${name}</strong>,
@@ -26,9 +26,8 @@ const sendEmail = (name, phone, email, address, services, frequency) => {
       Kind regards,
       <br><br>
       WindowClean North-East
-      `
+      `,
   });
-  console.log('Email sent');
 };
 
 module.exports = sendEmail;
